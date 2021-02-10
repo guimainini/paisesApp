@@ -5,6 +5,7 @@ import { PorPaisComponent } from './pais/pages/por-pais/por-pais.component';
 import { PorRegionComponent } from './pais/pages/por-region/por-region.component';
 import { PorCapitalComponent } from './pais/pages/por-capital/por-capital.component';
 import { VerPaisComponent } from './pais/pages/ver-pais/ver-pais.component';
+import { PorProvinviaComponent } from './pais/pages/por-provinvia/por-provinvia.component';
 
 const routes: Routes = [
     
@@ -24,6 +25,10 @@ const routes: Routes = [
     {
         path: 'pais/:id',
         component: VerPaisComponent
+    },
+    {
+        path: 'provincias',
+        component: PorProvinviaComponent
     },
     {
         path: '**',

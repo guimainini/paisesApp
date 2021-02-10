@@ -10,6 +10,9 @@ import { tap } from 'rxjs/operators';
 export class PaisService {
   
   private apiUrl:string = 'https://restcountries.eu/rest/v2';
+  private apiUrlGobiernoProvincia: string = 'https://apis.datos.gob.ar/georef/api/provincias?nombre=';
+
+
   
   get httpParams () {
     return new HttpParams()
@@ -58,6 +61,16 @@ export class PaisService {
               tap(console.log)
             )
     
+  }
+
+  buscarProvincia ( provincia: string ){
+    
+    const url = `${this.apiUrlGobiernoProvincia}${provincia}`;
+    
+    return this.http.get( url)
+            .pipe(
+              tap(console.log)
+            )
   }
 
 
