@@ -26,11 +26,12 @@ export class PorProvinviaComponent {
     .subscribe( (provincia) => {
       
       this.provincia = provincia;
-      //console.log(this.provincia);
       
-      //console.log(Object.values(this.provincia)); // convierto un objeto a un array
-      this.provi = Object.values(this.provincia);
-      console.log(typeof this.provi);
+      this.provi = Object.values(this.provincia);// convierto un objeto a un array
+      
+      
+
+      
       this.provi2 = JSON.stringify(this.provi[3][0]);
       
       //console.log(typeof provincia) //object

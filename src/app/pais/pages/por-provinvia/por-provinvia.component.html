@@ -12,5 +12,11 @@
         </div>
     </div>
 
-    <p>{{this.provi2}}</p>
+    <ul>
+        <li *ngFor="let item of provincia | keyvalue">
+            {{item.key}} : {{item.value}}
+        </li>
+        <hr>
+        <p>{{this.provi2}}</p>
+    </ul>
 </div>
